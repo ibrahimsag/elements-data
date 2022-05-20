@@ -1,6 +1,8 @@
+# Machine-Readable Source of Euclid's Elements
+
 Content behind [canberead.com/elements](https://canberead.com/elements). Based on [this translation](http://farside.ph.utexas.edu/books/Euclid/Euclid.html).
 
-# Structure
+## Structure
 
 Array of `Section` for each book.
 
@@ -15,7 +17,7 @@ Array of `Section` for each book.
  - `letters` the position of the letter drawn on figure relative to the position of the point above.
     - Array of two numbers, radial direction(Math.PI/4) and distance.
     - e.g. `{ 'A': [1], 'B': [5], 'L': [3, 3] }` for `A` is above, `B` below and `L` to the left.
-    - Second number in L is for leaving more space. 
+    - Second number in L is for leaving more space.
  - `shapes` array of shapes. Each shape is itself an array.
     - First element of the shape array is the name of a primitive.
     - Rest are points to be taken as arguments to the primitive.
