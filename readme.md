@@ -21,8 +21,10 @@ Array of `Section` for each book.
  - `shapes` array of shapes. Each shape is itself an array.
     - First element of the shape array is the name of a primitive.
     - Rest are points to be taken as arguments to the primitive.
-    - Primitive should be one of `point`, `line`, `polygon`, `circle`, `arc`, `arcc`(ccw arc), `angle`, `curve`, `gnomon`(arc with dashed line).
-    - final element can be an object with the following properties `stroke`(stroke color), `strokeWidth`.
+    - Primitive should be one of `point`, `line`, `polygon`, `circle`, `arc`, `arcc`(ccw arc), `angle`, `curve`, `gnomon`(`arc` with dashed line).
+    - final optional element of the array can be an object with the following properties:
+      - `{ layer: 'low' }` for shapes that are closer to the background color. As in [Proposition 13.16](https://canberead.com/elements/13.16)
+      - `{ dashed: true }` for dashed lines and polygons. As in [3.8](https://canberead.com/elements/3.8) and [10.32-lem](https://canberead.com/elements/10.32-lem)
  - \*`polygonl` when the polygon is referenced by two diagonal corners in prose, all the corners are found through this map.
  - \*`given` when the reference in prose is not a primitive but should be an array of primitives, this object maps to an array similar to `shapes` above.
 
